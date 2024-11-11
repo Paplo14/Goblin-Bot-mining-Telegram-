@@ -10,4 +10,4 @@ How to start bot? Download Pydriod3 from Google Play..
 
 Open script Bot.py 
 
-Video 📸 Show how it work : 
+Video 📸 Show how it work : https://youtu.be/GhYZJLYj7rA?si=pbTD5sTJXZL5zAee
