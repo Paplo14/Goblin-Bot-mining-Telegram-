@@ -25,9 +25,20 @@ def login(intdata):
         "query": "mutation login($input: LoginInput!) {\n  login(input: $input) {\n    status\n    token\n    user {\n      id\n      first_name\n    }\n  }\n}"
     }
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
     
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
@@ -76,19 +87,20 @@ def get_bronze_world_balance(token):
 
     # الرؤوس (Headers)
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     try:
         # إرسال الطلب
@@ -195,19 +207,20 @@ def CatchWork(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     try:
         response = requests.post(url, data=payload, headers=headers)
@@ -254,22 +267,25 @@ def get_user_mine_id(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     response = requests.post(url, data=payload, headers=headers)
     re = response.json()
+    #print(f"wha i do :{re}")
+   
 
     user_mine_id = None
     for mine in re['data']['mines']:
@@ -290,32 +306,46 @@ def get_cart_id_by_price(token):
 
     url = "https://api.goblinmine.game/graphql"
     
+    # يجب استبدال 'set' بقيمة رقمية صحيحة
+    mine_id = 1  # على سبيل المثال، قم بتحديث هذا حسب الحاجة
+
     payload = json.dumps({
       "operationName": "carts",
       "variables": {
-        "mineId": set,
+        "mineId": mine_id,
         "userMineId": user_mine_id
       },
       "query": "query carts($mineId: Int!, $userMineId: Int!) {\n  carts(mineId: $mineId, userMineId: $userMineId) {\n    auto\n    available\n    id\n    image\n    level\n    name\n    price\n    volume\n    currency {\n      ...CURRENCY_FRAGMENT\n      __typename\n    }\n    miningCurrency {\n      ...CURRENCY_FRAGMENT\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment CURRENCY_FRAGMENT on Currency {\n  id\n  amount\n  coefficient\n  icon\n  name\n  __typename\n}"
     })
 
     headers = {
-      'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-      'Content-Type': "application/json",
-      'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-      'accept-language': "en",
-      'sec-ch-ua-mobile': "?1",
-      'authorization': f"Bearer {token}",
-      'sec-ch-ua-platform': "\"Android\"",
-      'origin': "https://game.goblinmine.game",
-      'sec-fetch-site': "same-site",
-      'sec-fetch-mode': "cors",
-      'sec-fetch-dest': "empty",
-      'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     response = requests.post(url, data=payload, headers=headers)
+
+    if response.status_code != 200:
+        print(f"Error: Request failed with status code {response.status_code}")
+        print("Response content:", response.text)
+        return
+
     re = response.json()
+    if 'data' not in re or 'carts' not in re['data']:
+        print("Error: 'data' or 'carts' key is missing in the response.")
+        print("Response content:", re)
+        return
 
     # استخراج "id" حيث تكون "available" هي False
     unavailable_carts = [cart['id'] for cart in re['data']['carts'] if not cart['available']]
@@ -351,19 +381,20 @@ def update_cart_status(token):
         })
 
         headers = {
-          'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-          'Content-Type': "application/json",
-          'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-          'accept-language': "en",
-          'sec-ch-ua-mobile': "?1",
-          'authorization': f"Bearer {token}",
-          'sec-ch-ua-platform': "\"Android\"",
-          'origin': "https://game.goblinmine.game",
-          'sec-fetch-site': "same-site",
-          'sec-fetch-mode': "cors",
-          'sec-fetch-dest': "empty",
-          'referer': "https://game.goblinmine.game/"
-        }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
         # إرسال الطلب
         response = requests.post(url, data=payload, headers=headers)
@@ -487,19 +518,20 @@ def mine_and_miners(token):
     }
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام json=payload
     response = requests.post(url, json=payload, headers=headers)
@@ -564,9 +596,20 @@ def buy_miner(token):
         "query": "mutation buyMiner($input: BuyMinerInput!) {\n  buyMiner(input: $input) {\n    message\n    status\n  }\n}"
     }
     headers = {
-        'Authorization': f"Bearer {token}",
-        'Content-Type': "application/json",
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
         data = response.json()
@@ -606,19 +649,20 @@ def get_inventory(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -660,19 +704,20 @@ def get_Jack(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -716,19 +761,20 @@ def get_Foremans(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -771,19 +817,20 @@ def Foremans(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -808,19 +855,20 @@ def Pickaxe(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -846,19 +894,20 @@ def get_ForemansFoldet(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -901,19 +950,20 @@ def ForemansFolder(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -937,19 +987,20 @@ def get_Directors(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -992,19 +1043,20 @@ def Directorsbriefcase(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -1028,19 +1080,20 @@ def get_badge(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -1083,19 +1136,20 @@ def badge(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -1120,19 +1174,20 @@ def get_tnt(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -1175,19 +1230,20 @@ def SmallTNT(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -1210,19 +1266,20 @@ def get_TNT(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -1265,19 +1322,20 @@ def TNT(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -1300,19 +1358,20 @@ def Jackhammer(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام requests.post
     response = requests.post(url, data=payload, headers=headers)
@@ -1397,19 +1456,20 @@ def fetch_mines_and_check_tasks2(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     try:
         response = requests.post(url, data=payload, headers=headers)
@@ -1433,7 +1493,7 @@ def fetch_mines_and_check_tasks2(token):
                             ids.append(mine.get("id"))  # إضافة معرف mine إلى القائمة
                             user_mine_ids.append(user_mine_id)  # إضافة userMine ID إلى القائمة
                             print(Fore.GREEN + f"Condition met! User Mine ID: {user_mine_id}")
-                            time.sleep(7)
+                            time.sleep(30)
                             process_upgrade(token)
                         else:
                             print(Fore.YELLOW + f"Condition not met for Mine ID: {mine.get('id')}")
@@ -1470,19 +1530,20 @@ def buy_miner_level(token, file_path, index):
         "query": "mutation buyMinerLevel($input: BuyMinerLevelInput!) {\n  buyMinerLevel(input: $input) {\n    balance\n    message\n    status\n    __typename\n  }\n}"
     }
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب باستخدام json=payload
     response = requests.post(url, json=payload, headers=headers)
@@ -1512,6 +1573,7 @@ def buy_miner_level(token, file_path, index):
             # استخراج الرسالة
             message = buy_miner_level.get("message", "Message not found")
             print(Fore.GREEN + f"Worker Id Try : [{miner_level_id}] Status : {message}")
+            
 
             # استدعاء المهام بناءً على الرسالة
             fetch_mines_and_check_tasks2(token)
@@ -1527,23 +1589,23 @@ def buy_miner_level(token, file_path, index):
             elif "Foreman's folder" in message:
                 print(Fore.GREEN + "Done UPGRADE ForemansFolder")
                 ForemansFolder(token)
-                time.sleep(6)
+                time.sleep(30)
                 SmallTNT(token)
-                time.sleep(6)
+                time.sleep(30)
                 TNT(token)
             elif "Director's briefcase" in message:
                 print(Fore.GREEN + "Done UPGRADE Director's briefcase")
                 Directorsbriefcase(token)
-                time.sleep(6)
+                time.sleep(30)
                 SmallTNT(token)
-                time.sleep(6)
+                time.sleep(30)
                 TNT(token)
             elif "Director's badge" in message:
                 print(Fore.GREEN + "Done UPGRADE Director's badge")
                 badge(token)
-                time.sleep(6)
+                time.sleep(30)
                 SmallTNT(token)
-                time.sleep(6)
+                time.sleep(30)
                 TNT(token)
 
         except json.JSONDecodeError:
@@ -1566,19 +1628,20 @@ def fetch_and_save_upgrade_ids(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب والحصول على الاستجابة
     response = requests.post(url, data=payload, headers=headers)
@@ -1644,19 +1707,20 @@ def process_upgrade(token):
         })
 
         headers = {
-            'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-            'Content-Type': "application/json",
-            'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-            'accept-language': "en",
-            'sec-ch-ua-mobile': "?1",
-            'authorization': f"Bearer {token}",
-            'sec-ch-ua-platform': "\"Android\"",
-            'origin': "https://game.goblinmine.game",
-            'sec-fetch-site': "same-site",
-            'sec-fetch-mode': "cors",
-            'sec-fetch-dest': "empty",
-            'referer': "https://game.goblinmine.game/"
-        }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
         # إرسال الطلب
         response = requests.post(url, data=payload, headers=headers)
@@ -1682,6 +1746,7 @@ def process_upgrade(token):
                 print(Fore.GREEN + f"Upgrade ID: {upgrade_id}")
                 print(Fore.GREEN + f"Status: {status}")
                 print(Fore.CYAN + f"Message: {message}")
+                time.sleep(60)
                 
 
             except json.JSONDecodeError:
@@ -1771,19 +1836,20 @@ def fetch_mines_and_check_tasks(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     try:
         # إذا كانت القائمة فارغة، استرجع البيانات واملأ القائمة
@@ -1836,19 +1902,20 @@ def pickup_mine(token):
         })
 
         headers = {
-            'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-            'Content-Type': "application/json",
-            'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-            'accept-language': "en",
-            'sec-ch-ua-mobile': "?1",
-            'authorization': f"Bearer {token}",
-            'sec-ch-ua-platform': "\"Android\"",
-            'origin': "https://game.goblinmine.game",
-            'sec-fetch-site': "same-site",
-            'sec-fetch-mode': "cors",
-            'sec-fetch-dest': "empty",
-            'referer': "https://game.goblinmine.game/"
-        }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
         response = requests.post(url, data=payload, headers=headers)
 
@@ -1871,19 +1938,20 @@ def fetch_task_ids(token):
     })
     
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
     
     # إرسال الطلب
     response = requests.post(url, data=payload, headers=headers)
@@ -1917,19 +1985,20 @@ def check_all_task_statuses(token,file_path="taskId.txt"):
     # إعدادات الطلب
     url = "https://api.goblinmine.game/graphql"
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # تكرار الطلب لكل taskId
     for task_id in task_ids:
@@ -1962,19 +2031,20 @@ def give_bonus(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     # إرسال الطلب وجلب الاستجابة
     response = requests.post(url, data=payload, headers=headers)
@@ -2000,19 +2070,20 @@ def extract_and_save_miner_ids(token):
     })
 
     headers = {
-        'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        'Content-Type': "application/json",
-        'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",
-        'authorization': f"Bearer {token}",
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
     response = requests.post(url, data=payload, headers=headers)
 
@@ -2058,19 +2129,20 @@ def buy_miners_from_file(token):
         })
 
         headers = {
-            'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-            'Content-Type': "application/json",
-            'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-            'accept-language': "en",
-            'sec-ch-ua-mobile': "?1",
-            'authorization': f"Bearer {token}",
-            'sec-ch-ua-platform': "\"Android\"",
-            'origin': "https://game.goblinmine.game",
-            'sec-fetch-site': "same-site",
-            'sec-fetch-mode': "cors",
-            'sec-fetch-dest': "empty",
-            'referer': "https://game.goblinmine.game/"
-        }
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+  'Content-Type': "application/json",
+  'sec-ch-ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+  'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
+  'accept-language': "en",
+  'sec-ch-ua-mobile': "?1",
+  'authorization': f"Bearer {token}",
+  'sec-ch-ua-platform': "\"Android\"",
+  'origin': "https://game.goblinmine.game",
+  'sec-fetch-site': "same-site",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://game.goblinmine.game/"
+}
 
         # إرسال الطلب
         response = requests.post(url, data=payload, headers=headers)
