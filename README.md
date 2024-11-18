@@ -2,8 +2,8 @@
 Goblin Bot mining ⛏️ Telegram 
 link 🔗 Bot: https://t.me/GoblinMine_bot/start?startapp=707813877
 
-Query id But it in data.txt
-how to get query id?
+user But it in data.txt
+how to get user?
 https://youtu.be/LcTo07Mlijo?si=W7brJStYsj0taqW-
 
 How to start bot? Download Pydriod3 from Google Play..
