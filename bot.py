@@ -101,53 +101,27 @@ def read_init_data(file_path='data.txt'):
 # دالة تسجيل الدخول
 
 def login(intdata):
-    # القيم الافتراضية للمحاولات والتأخير
-    max_retries = 20
-    delay = 10
+    try:
+        # قراءة الملف الخارجي
+        with open("data.txt", "r") as file:
+            # افتراض أن قيمة `token` هي السطر الأول في الملف
+            token = file.readline().strip()
+        
+        # اسم المستخدم
+        first_name = "Sir"
+        
+        # إرجاع القيم
+        return token, first_name
+    except FileNotFoundError:
+        print("الملف data.txy غير موجود.")
+        return None, None
+    except Exception as e:
+        print(f"حدث خطأ أثناء قراءة الملف: {e}")
+        return None, None
 
-    url = "https://api.goblinmine.game/graphql"
-    payload = {
-        "operationName": "login",
-        "variables": {
-            "input": {
-                "initData": intdata
-            }
-        },
-        "query": "mutation login($input: LoginInput!) {\n  login(input: $input) {\n    status\n    token\n    user {\n      id\n      first_name\n    }\n  }\n}"
-    }
-    headers = {
-        'User-Agent': f"{get_user_agent()}",
-        'Content-Type': "application/json",
-        'app-b': "7246500f-89c5-4178-bdc3-d265b960b294",
-        'accept-language': "en",
-        'sec-ch-ua-mobile': "?1",  
-        'sec-ch-ua-platform': "\"Android\"",
-        'origin': "https://game.goblinmine.game",
-        'sec-fetch-site': "same-site",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://game.goblinmine.game/"
-    }
+# اختبار الدالة
+
     
-    retries = 0  # عدد المحاولات
-    while retries < max_retries:
-        print(Fore.BLUE + f"Attempting login... Attempt {retries + 1}/{max_retries}")
-        response = requests.post(url, json=payload, headers=headers)
-        if response.status_code == 200:
-            data = response.json()
-            if "data" in data and "login" in data["data"]:
-                token = data["data"]["login"]["token"]
-                first_name = data["data"]["login"]["user"]["first_name"]
-                print(Fore.GREEN + f"Login Successful! Token: {token} | User: {first_name}")
-                return token, first_name
-        # إذا فشلت المحاولة
-        print(Fore.RED + f"Login failed. Retrying... ({retries + 1}/{max_retries})")
-        retries += 1
-        time.sleep(delay)  # الانتظار لمدة delay ثانية قبل المحاولة التالية
-    
-    # إذا لم يتم العثور على التوكين بعد المحاولات
-    print(Fore.RED + "Login failed after multiple attempts.")
-    return None, None
 
 # اختبار الدالة مع بيانات تمثيلية
 
@@ -238,8 +212,8 @@ def send_requests_with_delay(token):
     }
     
     # إعداد عدد الطلبات والفاصل الزمني
-    total_requests = 1
-    delay = 20
+    total_requests = 50
+    #delay = 1
 
     # متغير لتخزين حالة الفوز
     won = False
@@ -280,15 +254,15 @@ def send_requests_with_delay(token):
                 print(Fore.GREEN +"You win")
             else:
                 print(Fore.RED +"You lose")
-                break  # التوقف عن إرسال الطلبات إذا كانت النتيجة "lose"
+                #break  # التوقف عن إرسال الطلبات إذا كانت النتيجة "lose"
         
         except Exception as e:
             print(f"Error: {e}")
             break  # إيقاف الحلقة في حالة وجود خطأ
         
         # الانتظار إذا لم يكن آخر طلب
-        if i < total_requests - 1:
-            time.sleep(delay)
+        #if i < total_requests - 1:
+#            time.sleep(delay)
 
     # إرسال cashOut فقط إذا كانت النتيجة "win" بعد انتهاء الحلقة
     if won:
@@ -296,6 +270,7 @@ def send_requests_with_delay(token):
         # إرسال طلب CashOut بعد انتهاء الحلقة إذا كانت النتيجة فوز
         cash_out_response = cashOut(token)
         print(f"CashOut Response: {cash_out_response}")
+        get_bronze_world_balance(token)
 
 def cashOut(token):
     """
@@ -511,7 +486,7 @@ def buy_mine(token):
             print(Fore.GREEN + f"BuyMine message: {message}")
         else:
             error_message = data.get("errors", [{"message": "Unknown error"}])[0]["message"]
-            print(Fore.RED + f"Don Buy Mine")
+            print(Fore.RED + f"Done Buy Mine")
     except ValueError:
         print(Fore.RED + "Error: Failed to parse JSON response.")
         print(Fore.RED + f"Response: {response.text}")
@@ -2512,21 +2487,22 @@ def main():
     if token and name:        
         welcome_user(name, token)
         set_mine_level()
-        time.sleep(4)        
-        get_cart_id_by_price(token)            
-        CatchWork(token)     
-        give_bonus(token)
-        buy_mine(token)  
-        extract_and_save_miner_ids(token)
-        buy_miners_from_file(token)
-        fetch_and_save_upgrade_ids(token)
-        fetch_task_ids(token)
-        check_all_task_statuses(token)
-        bl = get_bronze_world_balance(token)
-        if bl >= 30000000:
-            print(Fore.GREEN + "Now Buy Cart")
-            update_cart_status(token)
-           
+        time.sleep(4)
+        if clm == "n" or clm == "N":
+        	get_cart_id_by_price(token)            
+        	CatchWork(token)     
+        	give_bonus(token)
+	        buy_mine(token)  
+	        extract_and_save_miner_ids(token)
+	        buy_miners_from_file(token)
+	        fetch_and_save_upgrade_ids(token)
+	        fetch_task_ids(token)
+	        check_all_task_statuses(token)
+	        bl = get_bronze_world_balance(token)
+	        if bl >= 30000000:
+	            print(Fore.GREEN + "Now Buy Cart")
+	            update_cart_status(token)
+                   
         while True:                       
             print(Fore.CYAN + "\nStarting new cycle of operations...\n")                        
             if set == set:
